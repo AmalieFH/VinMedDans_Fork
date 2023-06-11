@@ -2,6 +2,7 @@
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import "../style/generelt.css";
+import Image from "astro/components/Image.astro";
 ---
 
 <html lang="da">
@@ -14,16 +15,41 @@ import "../style/generelt.css";
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Montserrat&display=swap" rel="stylesheet" />
-    <title>VinMedDans</title>
+    <title>Vin Med Dans</title>
   </head>
   <body>
     <Header />
 
     <main>
-      <div class="image-container">
-        <img class="forsidebillede" src="/img/forsidepic1.webp" alt="2 vine der står på en blomstermark" />
-        <img class="forsidebillede2" src="/img/forsidepic2.webp" alt="2 vine der står på en blomstermark mobil version">
+      <div class="text_container">
+        <div class="image-container">
+          <img class="nyforside" src="/img/blomstervin.webp" alt="Hønefuld bliver holdt op mod solen - desktop" />
+          <img class="nyforside2" src="/img/blomstervin.webp" alt="Hønefuld bliver holdt op mod solen - mobilversion">
+          <button class="button">
+        <a href="../webshop.astro">Gå til webshop</a>
       </div>
+      </div>
+    
+     
+      <div class="top-right">
+        <h1>Velkommen til Vin Med Dans</h1>
+        <p>Tak fordi du tjekker vores hjemmeside ud! Her kan du købe hjemmeproduceret bær- og frugtvin fra vores 
+          bryggeri i Nordhavn, København. Desuden kan du blive klogere på hvordan vi producerer vores vine og lærer
+          ejerne bag Vin Med Dans at kende. 
+        </p>
+        <br>
+
+        <p>Tjek vores udvalg ud her! Du er velkommen til at kontakte os for spørgsmål. </p>
+    </div>
+
+    <div class="mobil_text">
+      <h2>Velkommen til Vin Med Dans</h2>
+      <p>Tjek vores udvalg ud her!</p>
+   </div>
+
+
+   
+   
     </main>
     <Footer />
     <script src="../scripts/login.js"></script>
@@ -42,13 +68,51 @@ import "../style/generelt.css";
     box-sizing: border-box;
   }
 
-  .forsidebillede {
+  .nyforside {
       display: none;
     }
-  .forsidebillede2{
+  .nyforside2{
     display: block;
   }
 
+  .text_container .button{
+    display: block;
+  }
+
+  .text_container .button {
+  display: block;
+  position: absolute;
+  background-color: #55a603;
+  bottom: 50%;
+  left: 42%;
+  border-radius: 4px;
+  font-family: "Amatic SC";
+  font-size: 0.7rem;
+  color: #f0d8e1;
+  padding: 7px 25px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.button:hover {
+    background-color: #305832;
+  }
+  .top-right{
+  display: none;
+  }
+
+  .mobil_text {
+  display: block;
+  position: absolute;
+  top: 29%;
+  left: 1%;
+  padding-right: 10%;
+  padding-left: 57%;
+  font-size: 0.6 rem;
+  }
+
+  
   /******** Desktop site *******/ 
 
   @media (min-width: 750px) {
@@ -58,11 +122,59 @@ import "../style/generelt.css";
     box-sizing: border-box;
   }
 
-    .forsidebillede2{
+
+  .text_container .button {
+  display: block;
+  position: absolute;
+  background-color: #55a603;
+  bottom: 52%;
+  left: 70%;
+  border-radius: 4px;
+  font-family: "Amatic SC";
+  font-size: 1.3rem;
+  color: #f0d8e1;
+  padding: 7px 25px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+  .button:hover {
+    background-color: #305832;
+  }
+
+/* container med knap på billedet */
+.text_container {
+  display: block;
+  position: relative;
+  text-align: left;
+  color: black;
+  font-weight: bolder;
+}
+
+/* text i billede*/
+.top-right{
+  display: block;
+  position: absolute;
+  top: 25%;
+  left: 16px;
+  padding-right: 5%;
+  padding-left: 57%;
+ 
+}
+
+  .nyforside2{
     display: none;
   }
-  .forsidebillede {
+  .nyforside {
       display: block;
     }
 
+    .mobil_text{
+    display: none;
+  }
+
+  }
+
+  
 </style>

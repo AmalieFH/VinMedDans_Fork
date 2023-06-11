@@ -46,24 +46,95 @@ import "../style/generelt.css";
       </div>
 
       <div class="grid_4_1">
-        <h2 class="galleri_text">Vin Med Dans Galleri</h2>
-      </div>
-      <div class="grid_4_2">
-        <img src="/img/galleriimg/galleri1.webp" alt="" />
-        <img src="/img/galleriimg/galleri2.webp" alt="" />
-        <img src="/img/galleriimg/galleri3.webp" alt="" />
-        <img src="/img/galleriimg/galleri4.webp" alt="" />
-        <img src="/img/galleriimg/galleri5.webp" alt="" />
-        <img src="/img/galleriimg/galleri6.webp" alt="" />
-        <img src="/img/galleriimg/galleri7.webp" alt="" />
-        <img src="/img/galleriimg/galleri8.webp" alt="" />
-        <img src="/img/galleriimg/galleri9.webp" alt="" />
+      <h2 class="galleri_text">Vin Med Dans Galleri</h2>
+    </div>
+
+    <div class="grid_4_2">
+
+      <div class="container">
+        <img src="/img/galleriimg/galleri2.webp" alt="Indsamling af bær og andre frugter" class="image">
+        <div class="overlay">
+          <div class="text">
+        
+                  <h2>På bær- og frugtjagt</h2>
+                  <p >Når sommeren går på hæld, trækker vi vores bedste bær- og frugtjægerudstyr frem! 
+                    Vi sniger os rundt i buskadset og opsnuser de sødeste og saftigste godbidder. Man 
+                    skulle næsten tro, at vi er blevet professionelle frugt-rovmestre. 
+                  </p>
+                </div>
+            </div>
       </div>
 
-      <Footer />
-    </main>
-  </body>
+      <div class="container">
+        <img src="/img/galleriimg/galleri3.webp" alt="Labels på Havtorben" class="image">
+        <div class="overlay">
+          <div class="text">
+        
+                  <h2>Labels på Havtorben</h2>
+                  <p> Endelig er vores søde Havtorben ved at blive pakket ind i sit super stilfulde label! 
+                  Han har ventet i spænding og trippet af utålmodighed for at komme ud og erobre smagsløgene 
+                  hos vores fantastiske kunder.</p>
+              </div>
+          </div>
+      </div>
+
+      <div class="container">
+        <img src="/img/galleriimg/galleri1.webp" alt="Vin Med Dans cykelvogn" class="image">
+        <div class="overlay">
+         <div class="text">
+      
+                  <h2>Vin Med Dans maler cykelvogn</h2>
+                  <p>Vi har brugt den tidlige sommer på at klargøre vores spritnye Vin Med Dans cykelvogn.
+                     Nu er vi helt klar til at rulle gennem Københavns gader med en ladning af vinflasker, 
+                    der er så friske, at de har brugt solcreme og solbriller!</p>
+          </div>
+      </div>
+  </div>
+
+  <div class="container">
+    <img src="/img/galleriimg/galleri7.webp" alt="Havtorn i spand" class="image">
+    <div class="overlay">
+     <div class="text">
+  
+              <h2>Samling af havtorn</h2>
+              <p>Vi har taget vores vaskemaskine med ud i havtorn-markerne for at give havtornene
+                en ordentlig skylletur! Tag et glas, løft det mod himlen og skål for Havtorben - vinen, 
+                der har gennemgået den mest luksuriøse spaoplevelse i havtornenes verden!</p>
+      </div>
+  </div>
+</div>
+
+<div class="container">
+  <img src="/img/galleriimg/galleri6.webp" alt="Blomster i Vin Med Dans flaske" class="image">
+  <div class="overlay">
+   <div class="text">
+
+            <h2>Sommerstemning hos Vin Med Dans</h2>
+            <p>Sommerstemningen har virkelig grebet fat i Vin Med Dans! Selv vores tomme flasker 
+              er blevet sommerbegejstrede og har fået en helt ny karriere som blomsterstatister!</p>
+    </div>
+</div>
+</div>
+
+<div class="container">
+  <img src="/img/galleriimg/galleri9.webp" alt="Asbjørn smager Hønefuld" class="image">
+  <div class="overlay">
+   <div class="text">
+
+            <h2>Asbjørn smager på Hønefuld</h2>
+            <p>Asbjørn sidder der og nyder et glas af vores sprælske Hønefuld. Sommeren er 
+              endelig ankommet, og luften lugter af muligheden for at sidde udenfor og nyde et godt glas.</p>
+    </div>
+  </div>
+  </div>
+</div>
+<Footer/>
+
+</main>
+</body>  
 </html>
+
+
 
 <style>
   .animation_top {
@@ -86,6 +157,8 @@ import "../style/generelt.css";
     margin-bottom: 15px;
   }
 
+
+  
   /*******  Mobil site *******/
   .grid_4 img {
     width: 395px;
@@ -122,6 +195,15 @@ import "../style/generelt.css";
     font-size: 2rem;
     margin-top: 4rem;
   }
+
+.text {
+  display: none;
+}
+
+.overlay {
+  display: none;
+}
+
   /******** Desktop site *******/
   @media (min-width: 750px) {
     /* web */
@@ -159,8 +241,6 @@ import "../style/generelt.css";
       margin-bottom: 40px;
     }
 
-    .grid_4_text {
-    }
 
     .grid_4_1 {
       text-align: center;
@@ -175,5 +255,47 @@ import "../style/generelt.css";
     .grid_4_2 img {
       width: 100%;
     }
-  }
+
+  .container {
+  position: relative;
+  width: 100%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 0;
+  background-color: #F35B98;
+  overflow: hidden;
+  width: 100%;
+  transition: 1.0s ease;
+}
+
+.container:hover .overlay {
+  height: 100%;
+}
+
+.text {
+  display: block;
+  position: relative;
+  color: black;
+  font-size: 20px;
+  top: 25%;
+  left: 50%;
+  bottom: 25%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+}
 </style>
